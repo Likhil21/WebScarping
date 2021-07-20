@@ -33,6 +33,7 @@ function getIssuesPageHtml(url, topic, repoName) {
         dirCreater(folderpath);
         let filePath = path.join(folderpath, repoName + ".pdf");
         console.log(filePath);
+        
         let text = JSON.stringify(arr);
         let pdfDoc = new pdfkit();
         pdfDoc.pipe(fs.createWriteStream(filePath));
